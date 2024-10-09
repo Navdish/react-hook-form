@@ -146,7 +146,7 @@ export default function Home() {
               control={control}
             /> */}
             
-            <TextField
+            {/* <TextField
               type="text"
               placeholder="Whatsapp"
               name="email"
@@ -160,6 +160,33 @@ export default function Home() {
                     error={errors.role}
                     options={countries ? countries: []}
                     control={control}
+                  />
+                </FormControl>
+                <IconButton
+                  disableTouchRipple
+                >
+                  <WhatsAppIcon />
+                </IconButton>
+                </InputAdornment>
+              }
+            /> */}
+            <TextField
+              type="text"
+              placeholder="Whatsapp"
+              name="email"
+              error={errors.email}
+              control={control}
+              startAdornment={
+              <InputAdornment position="start" classes={{positionStart: 'start-ad'}}>
+                <FormControl fullWidth>
+                  <Autocomplete
+                    control={control}
+                    name="movie"
+                    // error={errors.movie}
+                    labelField={"name"}
+                    options={countries ?? countries}
+                    identifier="long"
+                    onClear={() => {}}
                   />
                 </FormControl>
                 <IconButton

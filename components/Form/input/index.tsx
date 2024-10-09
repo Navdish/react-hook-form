@@ -34,11 +34,11 @@ const TextField: React.FC<CustomTextFieldProps> = ({
             ref={ref}
             InputProps={{
               sx: { pr: "2px" },
+              classes: {
+                adornedStart: 'start-adornment'
+              },
               ...(startAdornment || endAdornment
                 ? {
-                    classes: {
-                      adornedStart: 'start-adornment'
-                    },
                     startAdornment: startAdornment ? startAdornment: null,
                     endAdornment: endAdornment && (
                       <InputAdornment position="end">
